@@ -1,29 +1,29 @@
 class Nostos < Formula
   desc "Functional programming language with lightweight processes and non-blocking I/O"
   homepage "https://github.com/pegesund/nostos"
-  version "0.2.0"
+  version "0.2.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/pegesund/nostos/releases/download/v#{version}/nostos-v#{version}-aarch64-apple-darwin.tar.gz"
-      sha256 "8771f55be42338c68a64e7f350caf74596ce7716e27a393d5c1e71c96d4e9c60"
+      url "https://github.com/pegesund/nostos/releases/download/v0.2.3/nostos-v0.2.3-aarch64-apple-darwin.tar.gz"
+      sha256 "851257a9741d8dc2b291e2b0ae90a9e0c08e836538e27a67059ddee227e75b14"
     else
-      url "https://github.com/pegesund/nostos/releases/download/v#{version}/nostos-v#{version}-x86_64-apple-darwin.tar.gz"
-      sha256 "5a3652e1942f8891dd6cd111728c9091a670c7e9fc631bc2c13c6323f660b831"
+      url "https://github.com/pegesund/nostos/releases/download/v0.2.3/nostos-v0.2.3-x86_64-apple-darwin.tar.gz"
+      sha256 "34f3d14132b36f539d4e803b1c396ec888e1e7c78bed7fb80e6261f5cd2daee6"
     end
   end
 
   on_linux do
-    url "https://github.com/pegesund/nostos/releases/download/v#{version}/nostos-v#{version}-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "5979eca043cc831e74ef91e3970ccbc5a42aa6e530639ede6078c2577784d304"
+    url "https://github.com/pegesund/nostos/releases/download/v0.2.3/nostos-v0.2.3-x86_64-unknown-linux-gnu.tar.gz"
+    sha256 "ef1cfa051a2944a5078b2247b0f13d46fe15886ac7d7b645209e60f5e1756ae6"
   end
 
   def install
     bin.install "nostos"
     bin.install "nostos-lsp" if File.exist?("nostos-lsp")
-
-    # Install stdlib (also embedded in binary, but useful for reference)
+    
+    # Install stdlib
     (share/"nostos"/"stdlib").install Dir["stdlib/*"] if File.directory?("stdlib")
   end
 
@@ -34,6 +34,9 @@ class Nostos < Formula
       To get started:
         nostos                    # Start the REPL
         nostos myfile.nos         # Run a program
+
+      The stdlib is installed at:
+        #{share}/nostos/stdlib
 
       VS Code extension available at:
         https://github.com/pegesund/nostos/tree/master/editors/vscode
