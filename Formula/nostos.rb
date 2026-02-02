@@ -1,22 +1,22 @@
 class Nostos < Formula
   desc "Functional programming language with lightweight processes and non-blocking I/O"
   homepage "https://github.com/pegesund/nostos"
-  version "0.2.5"
+  version "0.2.9"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/pegesund/nostos/releases/download/v0.2.5/nostos-v0.2.5-aarch64-apple-darwin.tar.gz"
-      sha256 "010af1eee304bb77eb54f4a82825a175db656fc9dcab2a92553e575ad8c8fb28"
+      url "https://github.com/pegesund/nostos/releases/download/v0.2.9/nostos-v0.2.9-aarch64-apple-darwin.tar.gz"
+      sha256 "ff39f2f86ab9f5118d12f198526e5fbe008f7c615cf544b22bd0cb977ec2cff4"
     else
-      url "https://github.com/pegesund/nostos/releases/download/v0.2.5/nostos-v0.2.5-x86_64-apple-darwin.tar.gz"
-      sha256 "42b40b40e8b7c3be1d4f5de58d8ea688fc2bbcef09dc31f1b98fcaa35696ebc6"
+      url "https://github.com/pegesund/nostos/releases/download/v0.2.9/nostos-v0.2.9-x86_64-apple-darwin.tar.gz"
+      sha256 "8583a128e5dbf66d155b2b00df321f11777a37ac16bb6d756984a7104b65daca"
     end
   end
 
   on_linux do
-    url "https://github.com/pegesund/nostos/releases/download/v0.2.5/nostos-v0.2.5-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "b52d6d112d99c49fd7c08c9417fb803e3d9a43b3d9f5c8e8f54112ae53c89a2d"
+    url "https://github.com/pegesund/nostos/releases/download/v0.2.9/nostos-v0.2.9-x86_64-unknown-linux-gnu.tar.gz"
+    sha256 "a1039e41f9d3b4fa79af0be7688f1f78b014e9f1c04177cd6c4ef9b76eef7e7d"
   end
 
   def install
