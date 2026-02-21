@@ -7,16 +7,16 @@ class Nostos < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/pegesund/nostos/releases/download/v0.2.17/nostos-v0.2.17-aarch64-apple-darwin.tar.gz"
-      sha256 "f25babb7ce65577fd52f8840eae5d75203c92a9f38f48d6df142c2e2de931dc2"
+      sha256 "004c30af7a894d01ca73df786484ea99c96dece54e84b98a3f3d67ef613c3c05"
     else
       url "https://github.com/pegesund/nostos/releases/download/v0.2.17/nostos-v0.2.17-x86_64-apple-darwin.tar.gz"
-      sha256 "ab1139bfeef561318b5d83273643aa1ce388977085f162aae6279fc9965dcf2e"
+      sha256 "499433299265ef2747324ffbeda995f3525bce20e99b7c43d6ec9d45ecde193a"
     end
   end
 
   on_linux do
     url "https://github.com/pegesund/nostos/releases/download/v0.2.17/nostos-v0.2.17-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "aeda8822906f9bdfba40115e5302f547a15ee0c14e689c4662369d2161356a06"
+    sha256 "e0de788388c8fa12f489f864ca3cf2adc68105ad8283e68bc634e0ed5b489326"
   end
 
   def install
